@@ -147,11 +147,6 @@ UPDATE species
 SET scientific_name = 'Cacatua galerita'
 WHERE scientific_name = 'Cacatua Galerita';
 
-with Session(engine) as session:
-    species = session.get(species, 1)
-    species.scientific_name = 'Cacatua galerita'
-    session.commit()
-
 
 -- 15. Elimina una observación de prueba (usa su id).
 -- Asegúrate de no borrar datos importantes.
